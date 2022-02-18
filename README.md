@@ -10,8 +10,8 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Project Set Up
 
-- [ ] Run `npm install` to install your dependencies.
-- [ ] Run tests locally executing `npm test`.
+- [X] Run `npm install` to install your dependencies.
+- [X] Run tests locally executing `npm test`.
 
 ## Project Instructions
 
