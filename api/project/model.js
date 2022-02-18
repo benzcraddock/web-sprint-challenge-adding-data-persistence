@@ -38,7 +38,11 @@ async function getProjectsById(id) {
     completed = true
   }
 
-  return project
+  // Responds with the newly created project (spread) with its project_completed as a boolean
+  return {
+    ...project,
+    project_completed: completed
+  }
 }
 
 function createProject(project) {
