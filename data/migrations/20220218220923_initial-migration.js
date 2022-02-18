@@ -25,9 +25,25 @@ exports.up = function(knex) {
         .onUpdate('RESTRICT')
         .onDelete('RESTRICT')
     })
-    
-};
+    .createTable('project_resources', table => {
+      table.increments('project_resources_id')
+      table.integer('project_id')
+        .unsigned()
+        .notNullable()
+        .references('project_id')
+        .inTable('projects')
+        .onUpdate('RESTRICT')
+        .onDelete('RESTRICT')
+      table.integer('resource_id')
+        .unsigned()
+        .notNullable()
+        .references('resource_id')
+        .inTable('resources')
+        .onDelete('RESTRICT')
+        .onUpdate('RESTRICT')
+    })
+}
 
 exports.down = function(knex) {
   
-};
+}

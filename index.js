@@ -1,10 +1,10 @@
-require('dotenv').config();
+require('dotenv').config()
 
-const server = require('./api/server');
+const server = require('./api/server')
 
 // Bring port number from `process.env` variable, falling back to `9000` if `process.env.PORT` is undefined
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 9000
 
 server.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}...`);
-});
+  console.log(`Listening on port ${PORT}...`)
+})
