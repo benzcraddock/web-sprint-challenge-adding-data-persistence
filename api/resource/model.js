@@ -7,6 +7,8 @@ function getResources() {
 function getResourcesById(id) {
   return db('resources')
     .where('resource_id', id)
+    .first()
+    // add .first() above 'where' query to fix return error below
 }
 
 function createResource(resource) {

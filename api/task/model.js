@@ -28,7 +28,9 @@ async function getTasks() {
 async function getTasksById(id) {
   const task = await db('tasks')
     .where('task_id', id)
-
+    .first()
+    // add .first() above 'where' query to fix return error below
+    
   let completed = task.task_completed
 
   // Boolean logic 

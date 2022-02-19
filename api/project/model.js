@@ -26,7 +26,9 @@ async function getProjects() {
 async function getProjectsById(id) {
   const project = await db('projects')
     .where('project_id', id)
-
+    .first()
+    // add .first() above 'where' query to fix return error below
+    
   let completed = project.project_completed
 
   // Boolean logic 
@@ -45,7 +47,7 @@ async function getProjectsById(id) {
   }
 }
 
-function createProject(project) {
+async function createProject(project) {
   return db('projects')
     .insert(project)
     .then(([id]) => { // eslint-disable-line

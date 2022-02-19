@@ -82,11 +82,11 @@ Build an API inside the `api` folder with endpoints for:
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
-- [ ] `[POST] /api/tasks`
+- [X] `[POST] /api/tasks`
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
-- [ ] `[GET] /api/tasks`
+- [X] `[GET] /api/tasks`
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Each task must include `project_name` and `project_description`
   - Example of response body: `[{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_name:"bar","project_description":null}]`
@@ -112,16 +112,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between Relational Databases and SQL.
 
-
+A relational database is a database that stores its data in tables and is grouped into rows and columns. SQL is a standard language that we use to extract and organize data stored in a relational database. SQL is basically the language of databases and facilitates the process of retrieving requested information from databases.
 
 2. Why do tables need a Primary Key?
 
-
+Tables need a primary key because they provide a unique value that help us to identify columns with a specific row in the database. This becomes very useful for when we want to join data from multiple tables.
 
 3. What is the name given to a table column that references the Primary Key on another table?
 
-
+This is known as the Foreign Key, which is a type of table field used for creating links between tables. Like primary keys, they are integers that identify data and are columns that contain values that correspond to primary keys in another table.
 
 4. What do we need in order to have a _many to many_ relationship between two tables?
 
-
+To have a many to many relationship between two tables, we must have an intermediary table that holds foreign keys that reference the primary key on the related tables. It is important to know that while each foreign key on the intermediary table is not unique, the combinations of keys should be unique.
