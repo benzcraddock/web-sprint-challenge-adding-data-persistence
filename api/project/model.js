@@ -7,7 +7,7 @@ async function getProjects() {
 
   // Boolean logic
   // -> when project_completed is 0 (defaultTo, false, or incomplete), push case to newProjects array.
-  // -> when projecT_completed is 1 (true), push case to newProjects array.
+  // -> when project_completed is 1 (true), push case to newProjects array.
   projects.forEach((e) => {
     e.project_completed === 0 ?
       newProjects.push({
